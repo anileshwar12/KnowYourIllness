@@ -1,5 +1,6 @@
 package com.acdevs.knowyourillness.data.repository
 
+import android.R.attr.id
 import android.content.Context
 import com.acdevs.knowyourillness.data.model.Symptom
 import org.json.JSONArray
@@ -12,10 +13,10 @@ class SymptomRepository(private val context: Context) {
         val list = mutableListOf<Symptom>()
 
         jsonObject.keys().forEach {
-            val index = jsonObject.getInt(it)
-            list.add(Symptom(name = it.replace("_", " "), index = index))
+            val id = jsonObject.getInt(it)
+            list.add(Symptom(name = it.replace("_", " "), id = id))
         }
 
-        return list.sortedBy { it.index }
+        return list.sortedBy { it.id }
     }
 }
