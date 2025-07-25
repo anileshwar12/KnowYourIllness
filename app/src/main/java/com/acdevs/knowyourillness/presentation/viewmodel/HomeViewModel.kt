@@ -4,7 +4,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.acdevs.knowyourillness.data.model.PredictionResult
 import com.acdevs.knowyourillness.data.model.Symptom
 import com.acdevs.knowyourillness.domain.usecase.LoadSymptomsUseCase
 import com.acdevs.knowyourillness.domain.usecase.PredictDiseaseUseCase
