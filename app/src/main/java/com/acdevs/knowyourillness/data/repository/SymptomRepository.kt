@@ -1,9 +1,7 @@
 package com.acdevs.knowyourillness.data.repository
 
-import android.R.attr.id
 import android.content.Context
 import com.acdevs.knowyourillness.data.model.Symptom
-import org.json.JSONArray
 import org.json.JSONObject
 
 class SymptomRepository(private val context: Context) {

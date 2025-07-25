@@ -12,13 +12,14 @@ import com.acdevs.knowyourillness.data.repository.SymptomRepository
 import com.acdevs.knowyourillness.domain.usecase.LoadSymptomsUseCase
 import com.acdevs.knowyourillness.domain.usecase.PredictDiseaseUseCase
 import com.acdevs.knowyourillness.presentation.ui.screens.HomeScreen
+import com.acdevs.knowyourillness.presentation.ui.theme.KnowYourIllnessTheme
 import com.acdevs.knowyourillness.presentation.viewmodel.HomeViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MaterialTheme {
+            KnowYourIllnessTheme {
                 val symptomRepo = remember { SymptomRepository(this) }
                 val predictionRepo = remember { PredictionRepository(this) }
                 val viewModel = remember {
